@@ -1,0 +1,62 @@
+// Variables de colores
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$danger-color: #e74c3c;
+$warning-color: #f39c12;
+$dark-color: #2c3e50;
+$light-color: #ecf0f1;
+
+// Variables adicionales
+$background-color: #f8f9fa;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$border-radius: 10px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$transition: transform 0.3s;
+
+// Estilos base
+body {
+    background-color: $background-color;
+    font-family: $font-family;
+}
+
+// Dashboard card con anidación
+.dashboard-card {
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    transition: $transition;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+// Lista de transacciones
+.transaction-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+// Tipos de transacciones usando mixins
+@mixin transaction-border($color) {
+    border-left: 4px solid $color;
+}
+
+.income {
+    @include transaction-border($secondary-color);
+}
+
+.expense {
+    @include transaction-border($danger-color);
+}
+
+// Contenedor de gráficos
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+
+// Navbar
+.navbar-brand {
+    font-weight: bold;
+    color: $dark-color !important;
+}
