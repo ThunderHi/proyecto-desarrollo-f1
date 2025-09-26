@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.transaction-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.income {
+    border-left: 4px solid var(--secondary-color);
+}
+
+.expense {
+    border-left: 4px solid var(--danger-color);
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--dark-color) !important;
+}
